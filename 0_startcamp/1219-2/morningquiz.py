@@ -1,8 +1,13 @@
 print('good morning')
 #1 평균을 구해라
 
+def average(temperature):
+    return round(sum(temperature)/len(temperature),2)
+
+def cube(x):
+    return x*x*x
+
 my_score = [79, 84, 66, 93]
-your_scorenumb=[]
 
 your_score ={
     '수학' : 87,
@@ -10,18 +15,12 @@ your_score ={
     '영어' : 76,
     '도덕' : 100
 }
-for key in your_score:
-    if(key=='수학','국어','영어','도덕'):
-        your_scorenumb.append(your_score[key])
+your_scorenumb=your_score.values()
 
-my_average=sum(my_score,0.0)/len(my_score)
-your_average=sum(your_scorenumb)/len(your_scorenumb)
+my_average = average(my_score)
+your_average=average(your_scorenumb)
 
-a=your_score.values()#value 값만뽑아낸다.
-
-print(a)
-print(len(a))
-print(your_score)
+# a=your_score.values()#value 값만뽑아낸다.
 
 print(my_average)
 print(your_average)
