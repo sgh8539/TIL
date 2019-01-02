@@ -24,7 +24,7 @@ jupyter-nbextension enable rise --py --sys-prefix
 
  컨벤션
 
-
+`git remote -v                                                                 `
 
 
 
@@ -34,7 +34,7 @@ and or 우선순위
 
 딕셔너리 in 접근
 
-
+none?
 
 
 
