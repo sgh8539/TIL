@@ -1,0 +1,2 @@
+import ex
+print(a)
