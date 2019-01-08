@@ -1,20 +1,44 @@
-coupon = 11
+result=[]
+remain = 0 
+a = 'R R G B R G B B'.split(' ')
 
-
-def chicken(n):
-    free = 3
-    if n<free:
-        return (0, n)
+def RGBfun(a):
+    remain = 0
+    result = []
+    if type(a)==str:
+        a = a.split(' ')
+    if len(a)==1:
+        return a
     else:
-        return (1+chicken(n-free+1)[0], chicken(n-free+1)[1])
+        for i in a:
+            if remain == 0:
+                remain = i 
+            elif remain == i:
+                if i=='R':
+                    result.append('R')
+                elif i=='G':
+                    result.append('G')
+                else:
+                    result.append('B')
+                remain=i
+            elif remain != i:
+                if i=='R':
+                    if remain=='B':
+                        result.append('G')
+                    else:
+                        result.append('B')
+                elif i=='G':
+                    if remain=='B':
+                        result.append('R')
+                    else:
+                        result.append('B')
+                else:
+                    if remain=='G':
+                        result.append('R')
+                    else:
+                        result.append('G')
+                remain=i
 
-a,b=chicken(coupon)
-print(f'치킨:{a}\n남은쿠폰:{b}')
-
-def chicchic(coup,free):
-    if coup<free:
-        return 0,free
-    else:
-        return(1+chicchic((coup-free+1),free)[0],free)
-print(chicchic(100,3))
-
+        return RGBfun(result)
+    
+print(RGBfun('R R G B R G B B'))
