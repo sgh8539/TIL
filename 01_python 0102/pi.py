@@ -1,2 +1,2 @@
-current = [1 for i in range(4)]
-print(current)
+for k in {'a':1, 'b':2, 'c':3}: # 딕셔너
+    print(k)
