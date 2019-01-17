@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta cahrset="UTF-8"> 
+    <style>
+        /* div:nth-of-type(1){
+            background-color: orange;
+            padding: 20px;
+
+        }
+        div:nth-of-type(2){
+            background-color: seagreen;
+            padding: 20px;
+            width: 300px;
+            margin:30px;
+        } */
+        span{
+            background-color:  brown;
+            color: white;
+            width: 2000px;
+            margin: 10px;
+            line-height: 50px;
+            /* 행간 */
+        }
+        /*  */
+        .wrapper{ font-size:0}
+        .inline-block{
+            display: inline-block;
+            /* inline-block 요소들을 수직 정렬 */
+            vertical-align: middle; 
+            border: 3px solid navy;
+            font-size: 16px;
+        }
+        .box1{
+            width: 300px;
+            height: 70px;
+        }
+        .box2{
+            width: 300px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inline-block box1">inline-block height 70px</div>
+    <div class="inline-block box2">inline-block height 150px</div>
+    <div class="wrapper">
+        <div class="inline-block box1">inline-block height 7    px</div>
+        <div class="inline-block box2">inline-block height 15px</div>
+    </div>
+
+
+    <div>
+        <h2>Block level element</h2>
+        <p>width, height를 미지정 >> width :100% height: auto;</p>
+    </div>
+
+    <div>
+        <h2>Block level element</h2>
+        <p>width: 300px > width: 300px, height: auto</p>
+    </div>
+    <!-- 
+        Block 레벨 element
+        Block이 갖는 특성
+        * 화면 크기 전체의 가로폭을 차지한다. (default: width 100%)
+        * 그래서 항상 새로운 줄에서 시작한다.
+        * width, height,  margin, padding 속성지정가능.
+        * block 안에 inline레벨 elem를 포함할 수 있다.
+        * block lv example
+            * div (header,footer,'''')
+            * h1 ~h6
+            * p
+            * ol,up>li
+            * hr
+            * table
+            * form
+            * input (은 block이 아니다. 옆으로 늘어나므로)
+    -->
+    <!-- 
+        Inline level element
+        Inline이 가지는 특성
+        * 새로운 라인에서 시작하지 않으며, 문장의 중간에 <줄바꿈 없이> 들어갈 수 있다.
+        * content의 너비만큼 가로폭을 차지한다.
+        * width, height, margin-top/bottom property를 지정할 수 없다. 상/하 여백은 line-height로 지정한다.
+        * inline요소 뒤에, 공백(\n, space)이 있으며, 자동으로 4px이 띄어진다.
+        * inline lv 요소안에 block lv 요소를 포함 불가. 보통은 block>inline
+        * inline element example
+            *span 아무런 목적없이 inline요소를 넣는다.
+            *a
+            *strong
+            *img
+            *br
+            *input,select, textarea
+            *button
+     -->
+     <h1>my <span>Important</span>Heading</h1>
+     <span>inline</span>
+     <span>inline</span>
+     <!-- 
+        Inline-block level element
+        Block & Inline Lv요소의 특징을 모두 갖는다. inline LV 요소와 같이 한줄에 표현됨
+        width, height, margin property를 모두 지정할 수있다.
+        * 기본적으로 inline 요소와 흡사하게, 줄바꿈없이 다른 요소와 한 행에 위치 시킬 수 있다.
+        * block LV처럼 width, height, margin padding property를 모두 정의 가능
+        * content 너비만큼만 가로폭을 가진다.
+        * element 뒤에 공백이 있으면, 자동 space.
+
+      -->
+</body>
+</html>
