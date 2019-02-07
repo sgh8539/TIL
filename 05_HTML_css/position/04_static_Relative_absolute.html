@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta cahrset="UTF-8"> 
+    <style>
+        body {
+            margin: 0px;
+        }
+        .parent{
+            width: 150px;
+            height: 150px;
+            background: gray;
+            border:1px solid black;
+            margin: 50px;
+            position: relative;
+            z-index: 1000;
+            /* postion :relative */
+        }
+        .relative-box{
+            position: relative;
+            top: 10px; left:10px;
+            width: 150px; height: 150px;
+            background: black;
+            color: orange;
+            font-weight: bold;
+            text-align: center;
+            line-height: 150px;
+
+        }
+
+
+        .absolute-box{
+            /* 부모가 스택틱인 순간에 자기 자리를 잡아버린다. */
+            position: absolute;
+            height: 150px ;width:150px;
+            top:10px;left:10px;
+            background: yellow;
+            color: deeppink;
+            font-weight: bold;
+            text-align: center;
+            line-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="absolute-box">
+            staticbox
+        </div>
+    </div>
+    <div class="relative-box">
+        relative-box
+    </div>
+</body>
+</html>

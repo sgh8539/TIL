@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta cahrset="UTF-8">
+    <style>
+        .box {
+            color: white;
+            font-weight: bold;
+            font-size: 50px;
+            border-radius: 6px;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            /* -로시작하는 것들 밴더 프리픽스모든 브라우저는 업그래에드 과정을 거친다.업데이트 과정중에 더새롭고 좋은 feature들기술또는 기능을 추가로 제공하는데 한사람한테 적용 안한사람들한테 안제공 하는 경우가생김.
+            업데이트 안한 사람들은 벤더 프리픽스를 쓰면은 특정 버전 아래에 있는 아래버전의 같은 기능을 제공한다.ㅊ */
+        }
+        .d1, .d2{
+            float: left;
+        }
+        .d1 {
+            background-color: red;
+        }
+        .d2{
+            background-color: orange;
+        }
+        .d3, .d4{float: right;}
+        .d3 {background: blue;}
+        .d4 {background: navy;}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box d1"> 1 </div>
+        <div class="box d2"> 2 </div>
+        <div class="box d3"> 3 </div>
+        <div class="box d4"> 4 </div>
+    </div>
+</body>
+
+</html>
