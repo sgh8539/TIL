@@ -1,0 +1,31 @@
+{% extends 'sns/base.html' %}
+{% block list %}active{% endblock %}
+{% block body %}
+    {% include 'sns/_header.html' %}
+    <hr>
+    {% if postings %}
+        <section class="card-columns">
+            {% for posting in postings %}
+                <article class="card mb-2">
+                    {% if posting.image %}
+                        <a href="{% url 'sns:posting_detail' posting.id %}">
+                            <img class="card-img-top image-fluid" src="{{ posting.image.url }}"
+                                 alt="{{ posting.image }}">
+                        </a>
+                    {% else %}
+                        <a href="{% url 'sns:posting_detail' posting.id %}">
+                            <img src="http://lorempixel.com/g/150/75" class="card-img-top"
+                                 alt="random_image_{{ forloop.counter }}">
+                        </a>
+                    {% endif %}
+
+                    <div class="card-body">
+                        {% for i in posting.comment_set.all %}
+                            <i class="{{ posting.icon }} fa-2x"></i>
+                        {% endfor %}
+                    </div>
+                </article>
+            {% endfor %}
+        </section>
+    {% endif %}
+{% endblock %}
